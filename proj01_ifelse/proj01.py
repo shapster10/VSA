@@ -16,16 +16,17 @@
 # Part II:
 # This program asks the user for his/her name and birth month.
 # Then, it prints a sentence that says the number of days and months until their birthday
+Current_Month=6
+Current_Day=12
 name= raw_input('Enter your name:')
 Birth= raw_input('Enter your birth month:')
 Day= raw_input('Enter your birth day:')
 if int(Birth) >= 6:
-    print "Your birthday is in " + str(Birth-6) 
+    print "Your birthday is in " + str(int(Birth)-int(Current_Month)) + ' months'
 else:
-    print 'Your birthday is in ' + str(12-(6- int(Birth)))
-if int(Day) >=11:
-    print 'Your birthday is in ' + str(Day-11)
+    print 'Your birthday is in ' + str(12-(Current_Month - int(Birth))) + ' months'
+if int(Day) >=12:
+    print 'Your birthday is in ' + str(Day-Current_Day) + 'days'
 else:
-    print 'Your birthday is in ' + str(30-(11- int(Day)))
-print
+    print 'Your birthday is in ' + str(30-(Current_Day- int(Day))) + ' days'
 # If you complete extensions, describe your extensions here!
