@@ -1,4 +1,4 @@
-for x in range(1,41):
+for x in range(1,201):
     y = raw_input('Enter Something')
     if y == 'hi':
         print 'bye'
@@ -8,9 +8,9 @@ for x in range(1,41):
         print 'is better than charlie'
     elif y== 'why':
         print 'because'
-    elif y== 'no':
+    elif y== 'no' or 'No' or 'Nah' or 'nah'
         print 'yes'
-    elif y== 'hey':
+    elif y== 'hey' or 'Hey':
         print 'sup'
     elif y== 'are you my friend':
         print 'yes'
@@ -18,5 +18,15 @@ for x in range(1,41):
         print 'no'
     elif y== 'yes':
         print 'no bc you bad'
+    elif y== 'stupid':
+        print 'dumb kid'
+    elif y== "i'm sad":
+        print "don't worry"
+    elif y == "I'm sad":
+        print "don't worry"
+    elif y == "im sad":
+        print "don't worry"
+    elif y == "Im sad":
+        print "don't worry"
     else:
         print 'your dumb'
