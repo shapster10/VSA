@@ -58,24 +58,24 @@ for item in b:
 
 j = 1
 while j == 1:
-    y = raw_input("give me a string and I will tell you if it is a palindrone: ")
+    y = raw_input("give me a string and I will tell you if it is a palindrone or not: ")
     y = y.lower()
     z = []
     x = 0
     q = 1
-    for s in range(0,len(y)):
+    for lol in range(0,len(y)):
         if y[x] != " ":
             z.append(y[x])
         x = x + 1
-    for h in range(0, len(z)/2):
+    for pal in range(0,len(z)/2):
         if z[0] == z[-1]:
             z = z[1:-1]
         else:
-              q = 0
+            q = 0
     if q == 0:
-        print 'Not a palindrome'
+        print 'We dont have a palindrome'
     else:
-        print 'This is a palindrome!'
+        print 'This is a palindrome! Good job'
 
 
 
