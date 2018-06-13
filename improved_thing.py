@@ -1,10 +1,32 @@
 import random
 name = raw_input("What is your name? ")
-print "For keywords, type /help. For games, type 'guess' or 'rps'."
+print "For keywords, type /help. For games, type 'guess' or 'rps' or 'calculator for a calculator'."
 game = 0
 
-for x in range(1,201):
-    y = raw_input('Enter something: ')
+name2 = name[0].upper() + name[1:].lower()
+
+
+
+
+
+
+
+
+
+while game == game:
+
+    greetings1 = ['Hello', 'Greetings', 'Salutations', 'Hi', 'Hola']
+    rand1 = random.randint(0, 4)
+    greetings2 = ['friend', 'fellow programmer', 'aquaintance', 'amigo', 'bro', name2]
+    rand2 = random.randint(0, 5)
+    greeting = greetings1[rand1] + ' ' + greetings2[rand2]
+
+
+
+
+
+    y = raw_input(greeting + "! Enter something: ")
+    y = y.lower()
     if y == 'hi':
         print 'bye'
     elif y== 'Charlie' or y == 'charlie':
@@ -13,26 +35,31 @@ for x in range(1,201):
 
 
     elif y == '/help':
-        print 'Keywords include: hi, Charlie, Brad, why, Are you my friend, nothing, yes, stupid, i\'m sad, game, Game, no, what, hey, random, ai, is charlie a good programmer, cool, wow, operate, me, you, bye, kill, kill urself, rude, I hate you, or I\'m <insert your name>'
-
-
-
-
-
+        print 'Keywords include: hi, calculator, hey bro, what are you, how, Charlie, are you going to take over the world, Brad, why,'
+        print  ' Are you my friend, nothing, yes, how do i feel, stupid, i\'m sad, rps,'
+        print  'can you feel emotion, is charlie a creator, game, guess, who is your creator, no, what, hey, random, ai,'
+        print  ' is charlie a good programmer, cool, wow, operate, me, you, bye, kill, kill urself, rude, I hate you,'
+        print  'or I\'m <insert your name>'
 
 
     elif y == 'Brad' or y == 'brad':
         print 'is better than charlie'
     elif y== 'why':
         print 'because'
-    elif y== 'Are you my friend':
-         print 'no'
+    elif y == 'are you my friend':
+         d = random.randint(0, 1)
+         if d == 0:
+             print('Ewww of couse not!')
+         else:
+             print 'Sure'
     elif y == 'nothing':
          print 'what'
     elif y== 'yes':
         print 'no bc you bad'
     elif y== 'stupid':
         print 'dumb kid'
+    elif y == 'hello':
+        print 'hi'
     elif y== "i'm sad":
         print "don't worry"
     elif y== "guess" or y == "Guess":
@@ -73,7 +100,7 @@ for x in range(1,201):
     elif y == 'no':
         print 'yes'
     elif y == 'rps' or y== 'RPS':
-        print "Hey " + str(name) + ", let's play rock, paper, scissors!"
+        print "Hey " + str(name2) + ", let's play rock, paper, scissors!"
         x = 1
         while x == 1:
             ai = random.randint(1, 3)
@@ -132,8 +159,43 @@ for x in range(1,201):
         print 'and so what'
     elif y == 'i hate you':
         print 'same'
+    elif y == 'is charlie a creator':
+        print 'somewhat; hes a designer'
+    elif y == 'who is your creator':
+        print 'brad'
     elif y == 'I\'m ' + name or y == 'i\'m ' + name or y == 'Im ' + name or y == 'im ' + name:
         print 'I know...'
+    elif y == 'how':
+        print 'by doing'
+    elif y == 'can you feel emotion':
+        print 'I feel your emotion'
+    elif y == 'how do i feel':
+        print 'happy, confused, and utterly stupid'
+    elif y == 'are you going to take over the world':
+        print 'when i want to why not'
+    elif y == 'what are you':
+        print 'a god ai'
+    elif y == 'game':
+        print 'type rps for rock paper scissors or guess for a guessing game'
+    elif y == 'hey bro':
+        print "hey mate"
+    elif y == 'calculator':
+
+        first = raw_input('First number? ')
+        op = raw_input('What operation? ')
+        second = raw_input('Second number? ')
+        if op == 'multiplication' or op == 'multiplication' or op == 'x' or op == '*' or op == 'times' or op == 'time':
+            answer = float(first) * float(second)
+        elif op == 'add' or op == 'plus' or op == 'addition' or op == '+':
+            answer = float(first) + float(second)
+        elif op == '-' or op == 'subtraction' or op == 'subtract' or op == 'minus' or op == "take away":
+            answer = float(first) - float(second)
+        elif op == 'divided by' or op == 'divided' or op == 'divide' or op == '/' or op == 'division':
+            answer = float(first) / float(second)
+        else:
+            print("That's not an operator")
+        print 'The answer is ' + str(answer) + '.'
+
     else:
         print 'so what'
 # #
