@@ -44,5 +44,58 @@ def choose_word(wordlist):
 # the wordlist variable so that it can be accessed from anywhere
 # in the program
 wordlist = load_words()
-
+import time
 # your code begins here!
+word = choose_word(wordlist)
+str.lower(word)
+guesses = 6
+print 'Welcome to hangman! I am thinking of a word with ' + str(len(word)) + " letters. You have six guesses."
+x = 1
+y = 2
+z = 0
+wx = 0
+blank = '_ ' * len(word)
+print blank
+underscore = ['_ '] * len(word)
+listword = []
+for fg in range(0,len(word)):
+    listword.append(word[fg])
+
+a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+while x == 1 and guesses > 0:
+    print 'Available options are: ' + str(a)
+    guess = raw_input("Pick a letter and see if it's in my word! ")
+    if guess in a:
+        x = x
+        a.remove(str(guess))
+    else:
+        print 'Pick a new letter. This is not a letter or has already been guessed.'
+        #break
+
+
+    if guess in word:
+        print "Right guess."
+        for letter in word:
+            if underscore[z] == guess:
+                z = z + 1
+
+        for r in range(0,len(word)):
+            if guess == word[r]:
+                del underscore[r]
+                underscore.insert(r, str(guess) + ' ')
+        blank = ''
+        for df in range(0, len(word)):
+            blank = blank + underscore[df]
+        print blank
+        z = 0
+    else:
+        print 'Wrong guess.'
+        guesses = int(guesses) - 1
+        print str(int(guesses)) + ' guesses left.'
+        if guesses == 0:
+            print 'YOU LOSE! NO MORE GUESSES ARE AVAILABLE.'
+            print "The word was " + word + "."
+    if '_ ' not in underscore:
+        print 'CONGRAGULATIONS! YOU WON THE HARDEST GAME YOULL EVER PLAY.'
+        print "You guessed the word " + word + "."
+        x = 0
